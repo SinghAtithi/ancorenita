@@ -1,0 +1,143 @@
+$lb: #2A2B3F;
+$rb: #272530;
+$st: #F4ECE6;
+
+body {
+  padding: 0;
+  background-image: radial-gradient(circle,$lb, $rb);  
+  overflow: hidden;
+}
+
+.space {
+  width: 98vw;
+  height: 100vh;
+  .earth {
+    width: 80vw;
+    height: 80vh;
+    position: fixed;
+    bottom: 0;
+    left: 10vw;
+    z-index: 99999;
+  }
+  .moon {
+    width: 6vw;
+    height: 6vw;
+    animation: moon 15s infinite linear;
+    position: absolute;
+    bottom: 0;
+    left: 45vw;
+    z-index: 9999999;
+  }
+
+  .star {
+    width:0.2vw;
+    height: 0.2vw;
+    background: $st;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(244,236,230,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(244,236,230,1);
+    box-shadow: 0px 0px 5px 0px rgba(244,236,230,1);
+  }
+  .rocket{
+    width: 29px;
+    height: 22px;
+    //background: url(../img/space-ship.png) no-repeat top center;
+    position: absolute;
+    bottom: 232px;
+    margin: 0 auto;
+    left: -360px;
+    right: 0;
+    z-index: 999999999;
+    -webkit-animation: rocket 100s infinite;
+    animation: rocket 100s infinite;
+  }
+}
+
+
+@keyframes moon {
+	from {
+		transform: rotate(0deg)
+		           translate(-23vw)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-23vw) 
+		           rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes rocket {
+  0% {
+   bottom: 232px;
+    left: -360px;
+	transform:rotate(-10deg);
+  }
+  
+  10% {
+	  transform:rotate(-10deg);
+  }
+  
+  10% {
+  bottom: 150px;
+  left: -800px;
+  transform:rotate(120deg);
+  }
+  
+  20% {
+  bottom: 450px;
+  left: -400px;
+  transform:rotate(190deg);
+  }
+  
+  30% {
+  bottom: 410px;
+  left: 800px;
+  transform:rotate(180deg);
+  }
+  
+  40% {
+  bottom: 410px;
+  left: 800px;
+  transform:rotate(100deg);
+  }
+  
+  45% {
+  bottom: 350px;
+  left: 800px;
+  transform:rotate(100deg);
+  }
+  
+  
+  50% {
+  bottom: 390px;
+  left: 800px;
+  transform:rotate(10deg);
+  }  
+  
+  
+  60% {
+  bottom: 390px;
+  left: 500px;
+  transform:rotate(0deg);
+  }
+  
+  70% {
+  bottom: 370px;
+  left: 300px;
+  transform:rotate(100deg);
+  }
+
+  80% {
+  bottom: 50px;
+  left: 300px;
+  transform:rotate(160deg);
+  }
+  
+  90% {
+  bottom: 160px;
+  left: 600px;
+  transform:rotate(30deg);
+  }
+}
